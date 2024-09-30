@@ -2,8 +2,8 @@ FROM komljen/ubuntu
 MAINTAINER Alen Komljen <alen.komljen@live.com>
 
 RUN \
+  add-apt-repository -y ppa:chris-lea/node.js && \
   apt-get update && \
   apt-get -y install \
-          apache2 && \
-  rm /var/www/html/index.html && \
+          nodejs && \
   rm -rf /var/lib/apt/lists/*
